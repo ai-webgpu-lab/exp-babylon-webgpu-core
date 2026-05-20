@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "repo": "exp-babylon-webgpu-core",
+    "commit": "0430345",
+    "timestamp": "2026-05-20T15:40:20.234Z",
+    "owner": "ai-webgpu-lab",
+    "track": "graphics",
+    "scenario": "babylon-webgpu-scene-readiness",
+    "notes": "meshCount=3; materialCount=3; submeshCount=9; samples=90; backend=webgpu; fallback=false; automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:40:21.843Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "01-babylon-scene-readiness"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "navigator.gpu available",
+      "required_features": [
+        "shader-f16"
+      ],
+      "limits": {
+        "maxTextureDimension2D": 8192,
+        "maxBindGroups": 4
+      }
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "main",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "graphics",
+    "name": "babylon-scene-readiness",
+    "input_profile": "3-meshes-9-submeshes-orbit-camera",
+    "model_id": "babylon-webgpu-core-readiness",
+    "resolution": "960x540"
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 1711.2,
+      "init_ms": 31.1,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "graphics": {
+      "avg_fps": 58.82,
+      "p95_frametime_ms": 17.2,
+      "scene_load_ms": 31.1,
+      "resolution_scale": 1,
+      "visual_artifact_note": "synthetic Babylon-style scene; meshes=3; submeshes=9"
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/01-babylon-scene-readiness.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-babylon-webgpu-core/",
+    "renderer_adapter": {
+      "id": "deterministic-three-style",
+      "label": "Deterministic Three-style",
+      "version": "1.0.0",
+      "capabilities": [
+        "scene-load",
+        "frame-pace",
+        "fallback-record"
+      ],
+      "backendHint": "synthetic",
+      "isReal": false,
+      "status": "deterministic",
+      "message": "Deterministic harness — replace by registering a real renderer."
+    },
+    "screenshots": [
+      "./reports/screenshots/01-babylon-scene-readiness.png"
+    ]
+  }
+}
